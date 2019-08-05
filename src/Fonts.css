@@ -10,6 +10,18 @@
     font-size: 80pt;
   }
 
+.text {
+    font-size: 20pt;
+    width: 75%;
+    text-align: center;
+}
+
+.smallTitle {
+    font-size: 30pt;
+    text-align: center;
+    width: 80%;
+}
+
   .test1 {
     font-family: 'Arapey', serif;
   }

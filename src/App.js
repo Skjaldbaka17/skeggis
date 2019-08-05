@@ -1,22 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
-import { Parallax } from "react-parallax";
-import image1 from "./assets/background/blue-bricks.jpg";
-import Logo from "./assets/single-beard.png"
+import LazyHero from 'react-lazy-hero';
+import image1 from "./assets/background/white-flower-pot.jpg";
+import Logo from "./assets/blackPerson2.png"
+import Logo2 from "./assets/blackPerson1.png"
 import styled from 'styled-components'
 import './Fonts.css'
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
-const insideStyles = {
-  background: "white",
-  padding: 20,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)"
-};
+import Layout from './components/Layout'
 
 const Styles = styled.div`
   div {
@@ -30,65 +20,61 @@ const Styles = styled.div`
     /*top: 50px;*/
     widht:200px;
   }
+
+  .centerRelative{
+    position:relative;
+    top: 75px;
+  }
+
+  
 `;
 
 
 
 function App() {
   return (
-    <Styles>
-    <Parallax bgImage="./assets/background/blue-bricks.jpg" strength={500} className="d-flex justify-content-center">
-      <div style={{ height: 2000 }}>
-      <h1 className="title">Skeggis <br/>
-        <span style={{marginLeft: "25px"}}>Software</span>
-</h1>
-      <Parallax strength={500} className="d-flex justify-content-center">
-      <img src={Logo}></img>
-      </Parallax>
-        
-        
-      </div>
-    </Parallax>
-    {/* <h1>| | |</h1>
-    <Parallax bgImage={image1} blur={{ min: -1, max: 3 }}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>Dynamic Blur</div>
-      </div>
-    </Parallax>
-    <h1>| | |</h1>
-    <Parallax bgImage={image1} strength={-100}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>Reverse direction</div>
-      </div>
-    </Parallax> */}
-    {/* <h1>| | |</h1>
-    <Parallax
-      bgImage={image1}
-      strength={200}
-      renderLayer={percentage => (
-        <div>
-          <div
-            style={{
-              position: "absolute",
-              background: `rgba(255, 125, 0, ${percentage * 1})`,
-              left: "50%",
-              top: "50%",
-              borderRadius: "50%",
-              transform: "translate(-50%,-50%)",
-              width: percentage * 500,
-              height: percentage * 500
-            }}
-          />
+    <Layout>
+      <Styles style={{ width: "100%" }}>
+        <LazyHero transitionDuration={0} minHeight="35%" opacity={0} parallaxOffset={100} imageSrc={image1}>
+          <div className="d-flex justify-content-center centerRelative" >
+            <h1 className="title">
+              Skeggis <br />
+              <span style={{ marginLeft: "100px" }}>Software</span>
+            </h1>
+          </div>
+          <div className="d-flex justify-content-center" >
+            <div className="d-flex justify-content-center" style={{ marginTop: "75px", marginRight:"20px" }}>
+              <img src={Logo}></img>
+            </div>
+            <div className="d-flex justify-content-center" style={{ marginTop: "75px" }}>
+              <img src={Logo2}></img>
+            </div>
+          </div>
+
+
+        </LazyHero>
+
+        <div className="container d-flex flex-column align-content-center">
+
+          <div className="d-flex justify-content-center" style={{ marginTop: "50px" }}>
+            <p className="text">
+              Skeggis er íslenskt hugbúnaðarfyrirtæki sem sérhæfir sig í hönnun og þróun snjallra vefsíðna og smáforrita fyrir síma.
+                Við staðhæfum að <b>öll</b> fyrirtæki eiga að hafa fallega vefsíðu sem auðvelt er að nota svo viðskiptavinir geti með engu erfiði
+                  fundið og skoðað hvað þau hafa upp á að bjóða.
+                </p>
+          </div>
+
+          <div className="d-flex justify-content-center">
+            <h3 className="smallTitle"> <b>App þróun, hönnun og hýsing vefsíðna,<br /> hugbúnaðarlausnir fyrir þig og þína viðskiptavini.</b> </h3>
+          </div>
         </div>
-      )}
-    >
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>renderProp</div>
-      </div>
-    </Parallax>
-    <div style={{ height: 500 }} />
-    <h2>{"\u2728"}</h2> */}
-  </Styles>
+        <div style={{ height: 1500 }}></div>
+        {/* <Parallax bgImage={image1} strength={500} >
+          
+        </Parallax> */}
+      </Styles>
+    </Layout>
+
   );
 }
 
