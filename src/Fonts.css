@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Display&display=swap'); /* Title */
+
+@import url('https://fonts.googleapis.com/css?family=Arapey&display=swap'); /* test1 */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap'); /* test2 */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap'); /* test3 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap'); /* test4 */
+
+.title {
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 80pt;
+  }
+
+  .test1 {
+    font-family: 'Arapey', serif;
+  }
+
+  .test2 {
+    font-family: 'Lobster', cursive;
+  }
+
+  .test3 {
+    font-family: 'IBM Plex Serif', serif;
+  }
+
+  .test4 {
+    font-family: 'Noto Serif', serif;
+  }
+
